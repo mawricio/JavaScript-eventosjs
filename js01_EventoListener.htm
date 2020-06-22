@@ -1,0 +1,12 @@
+<script type="text/javascript" src="/path/to/event-listener.js"></script>
+ 
+<form>
+    <input type="text" name="a" />
+    <input type="submit" />
+</form>
+ 
+<script type="text/javascript">
+var f = document.forms[0];
+addEvent(f, "submit", function( e ) { alert(f.a.value);return false; });
+addEvent(f.a, "keyup", function( e ) { f.a.value=f.a.value.toUpperCase(); });
+</script>
